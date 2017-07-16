@@ -1,18 +1,26 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <button @click="myGo">点击进入我的个人世界吧</button>
+    <myp ref="myp"></myp>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import myp from '@/components/myp'
 export default {
-  name: 'hello',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      id:"122344"
     }
-  }
+  },
+  methods: {
+    myGo () {
+      this.$router.push("/index/"+this.id) 
+      this.$refs.myp.show()
+    }
+  },
+  components: { myp }
 }
 </script>
 
