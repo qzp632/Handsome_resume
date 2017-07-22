@@ -14,7 +14,6 @@ export default {
 			isn:false
 		}
 	},
-	
 	methods: {
 	    show: function () {
 	      this.isn = true
